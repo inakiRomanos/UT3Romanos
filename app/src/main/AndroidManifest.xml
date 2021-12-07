@@ -9,11 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UT3Romanos">
+        <activity android:name=".DashboardActivity" />
         <activity
-            android:name=".DashboardActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Splashscreen"
+            android:name=".SplashscreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
