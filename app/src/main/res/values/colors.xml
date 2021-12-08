@@ -10,9 +10,15 @@
     <color name="white">#FFFFFFFF</color>
 
     <!--<color name="colorPrimaryDark">#00574B</color>-->
-    <color name="colorPrimary">#E6295F</color>
-    <color name="colorPrimaryDark">#D81B60</color>
-    <color name="colorAccent">#008577</color>
+    <color name="colorPrimary">#2BCC6F</color>
+    <color name="colorPrimaryDark">#2BCC6F</color>
+    <color name="colorAccent">#333333</color>
+
+    <color name="colorPrimarylIGTH">#E9F8F1</color>
+    <color name="colorBackgrounf">#EBEBEB</color>
+    <color name="colorTrendingStart">#00B09B</color>
+    <color name="colorTrendingEnd">#96C93D</color>
+    <color name="colorDivide">#D6D6D6</color>
 
     <color name="red">#F15050</color>
     <color name="red_dark">#D43D3C</color>
