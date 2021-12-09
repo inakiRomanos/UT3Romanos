@@ -2,4 +2,7 @@
     <string name="app_name">UT3Romanos</string>
     <string name="Jhon">Jhon</string>
     <string name="hello">Hello</string>
+    <string name="GAMES">GAMES</string>
+    <string name="CONTACTS">CONTACTS</string>
+    <string name="HEALTH">HEALTH</string>
 </resources>
