@@ -6,4 +6,6 @@
     <string name="CONTACTS">CONTACTS</string>
     <string name="HEALTH">HEALTH</string>
     <string name="MAPS">MAPS</string>
+    <string name="trending">TRENDING</string>
+    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
 </resources>
