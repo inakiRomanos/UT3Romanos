@@ -47,11 +47,10 @@
             android:layout_marginEnd="15dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_baseline_menu_24"
-            android:tint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textHello"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/textHello"
-            />
+            app:tint="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,7 +86,7 @@
                 android:contentDescription="@string/app_name"
                 android:padding="6dp"
                 android:src="@drawable/ic_search"
-                android:tint="@color/colorPrimary" />
+                app:tint="@color/colorPrimary" />
             
         </LinearLayout>
 
@@ -302,11 +301,10 @@
                     android:layout_height="30dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_baseline_favorite_border_24"
-                    android:tint="@color/white"
                     app:layout_constraintBottom_toBottomOf="@id/textTrending"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/textTrending"
-                    />
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -327,5 +325,24 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+    
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/white"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navigation_menu" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivide"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
+
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
 
