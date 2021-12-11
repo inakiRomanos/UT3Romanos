@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UT3Romanos</string>
+    <string name="Jhon">Jon</string>
+    <string name="hello">Kaixo</string>
+    <string name="MAPS">MAPAK</string>
+    <string name="HEALTH">OSASUNA</string>
+    <string name="CONTACTS">" KONTAKTUAK"</string>
+    <string name="GAMES">JOLASAK</string>
+</resources>
