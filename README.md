@@ -4,7 +4,7 @@ Tarea003 Programacion Multimedia y Dispositivos
 
 ***E-mail:*** iromanomer@educacion.navarra.es
 
-****Descripcion:*** 
+***Descripcion:*** 
 
 Para realizar el ejercicio me ceñido mucho a las instrucciones dadas. 
 
