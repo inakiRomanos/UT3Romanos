@@ -33,7 +33,7 @@
 
         <activity android:name=".MapsActivity"/>
         <activity android:name=".DashboardActivity" />
-        <activity android:name=".PruebaActivity"/>
+        <activity android:name=".ContactActivity"/>
         <activity
             android:name=".SplashscreenActivity"
             android:exported="true">

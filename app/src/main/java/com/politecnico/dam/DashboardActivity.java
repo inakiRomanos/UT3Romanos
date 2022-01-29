@@ -27,7 +27,7 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         option_contact.setOnClickListener(v -> {
-            Intent i = new Intent(DashboardActivity.this, PruebaActivity.class);
+            Intent i = new Intent(DashboardActivity.this, ContactActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(i);
         });
