@@ -4,14 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 public class DashboardActivity extends AppCompatActivity {
 
     LinearLayout option_maps;
+    LinearLayout option_contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +18,19 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         option_maps = findViewById(R.id.layoutMaps);
+        option_contact = findViewById(R.id.layoutContacts);
 
-        option_maps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this, MapsActivity.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(i);
-            }
+        option_maps.setOnClickListener(v -> {
+            Intent i = new Intent(DashboardActivity.this, MapsActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(i);
         });
 
+        option_contact.setOnClickListener(v -> {
+            Intent i = new Intent(DashboardActivity.this, PruebaActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(i);
+        });
 
     }
 }
