@@ -44,7 +44,7 @@ public class ContactActivity extends AppCompatActivity {
                 JSONObject itemDetail = itemArray.getJSONObject(i);
                 // fetch email and name and store it in arraylist
                 nombre.add(itemDetail.getString("NOMBRE"));
-                direccion.add(itemDetail.getString("DIRECCIÓN"));
+                direccion.add(itemDetail.getString("DIRECCIÓN "));
                 localidad.add(itemDetail.getString("LOCALIDAD"));
                 telefono.add(itemDetail.getString("TELÉFONO"));
 
