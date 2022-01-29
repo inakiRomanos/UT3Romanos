@@ -1,5 +1,6 @@
 package com.politecnico.dam;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,10 +19,10 @@ import java.util.ArrayList;
 
 public class ContactActivity extends AppCompatActivity {
 
-    // ArrayList for person names, email Id's and mobile numbers
-    ArrayList<String> personNames = new ArrayList<>();
-    ArrayList<String> emailIds = new ArrayList<>();
-    ArrayList<String> mobileNumbers = new ArrayList<>();
+    ArrayList<String> nombre = new ArrayList<>();
+    ArrayList<String> direccion = new ArrayList<>();
+    ArrayList<String> localidad = new ArrayList<>();
+    ArrayList<String> telefono = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,32 +38,30 @@ public class ContactActivity extends AppCompatActivity {
             // get JSONObject from JSON file
             JSONObject obj = new JSONObject(loadJSONFromAsset());
             // fetch JSONArray named users
-            JSONArray userArray = obj.getJSONArray("users");
-            // implement for loop for getting users list data
-            for (int i = 0; i < userArray.length(); i++) {
+            JSONArray itemArray = obj.getJSONArray("ITEMS");
+            for (int i = 0; i < itemArray.length(); i++) {
                 // create a JSONObject for fetching single user data
-                JSONObject userDetail = userArray.getJSONObject(i);
+                JSONObject itemDetail = itemArray.getJSONObject(i);
                 // fetch email and name and store it in arraylist
-                personNames.add(userDetail.getString("name"));
-                emailIds.add(userDetail.getString("email"));
-                // create a object for getting contact data from JSONObject
-                JSONObject contact = userDetail.getJSONObject("contact");
-                // fetch mobile number and store it in arraylist
-                mobileNumbers.add(contact.getString("mobile"));
+                nombre.add(itemDetail.getString("NOMBRE"));
+                direccion.add(itemDetail.getString("DIRECCIÓN"));
+                localidad.add(itemDetail.getString("LOCALIDAD"));
+                telefono.add(itemDetail.getString("TELÉFONO"));
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        CustomAdapter customAdapter = new CustomAdapter(ContactActivity.this, personNames, emailIds, mobileNumbers);
+        CustomAdapter customAdapter = new CustomAdapter(ContactActivity.this, nombre, direccion, localidad, telefono);
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
     }
 
     public String loadJSONFromAsset() {
         String json;
         try {
-            InputStream is = getAssets().open("users_list.json");
+            InputStream is = getAssets().open("CentrosSanitarios.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
