@@ -14,4 +14,5 @@
     <string name="settings">settings</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="nombre">nombre</string>
+    <string name="CLINIC">CLINICS</string>
 </resources>
