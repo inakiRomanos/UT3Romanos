@@ -1,5 +1,10 @@
 package com.politecnico.dam;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
@@ -9,11 +14,6 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -28,8 +28,10 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.politecnico.dam.databinding.ActivityMapsBinding;
 
 import java.util.List;
+
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -97,8 +99,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
         else {
-            //fusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-            //mMap.setMyLocationEnabled(true);
+            fusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+            mMap.setMyLocationEnabled(true);
         }
     }
 
@@ -196,8 +198,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             // other 'case' lines to check for other
             // permissions this app might request
-            default:
-                throw new IllegalStateException("Unexpected value: " + requestCode);
         }
     }
 }
