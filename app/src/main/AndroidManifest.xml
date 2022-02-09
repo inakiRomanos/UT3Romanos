@@ -35,6 +35,7 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".ContactActivity" />
+        <activity android:name=".GameActivity" />
         <activity
             android:name=".SplashscreenActivity"
             android:exported="true" >
