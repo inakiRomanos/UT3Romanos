@@ -15,26 +15,13 @@ public class JuegoDBHelper extends SQLiteOpenHelper {
     }
 
 
-    @Override
+
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + JuegoContract.BaseDatosJuegosEntry.TABLE_NAME + " ("
-                + JuegoContract.BaseDatosJuegosEntry.INDICE + " TEXT NOT NULL,"
-                + JuegoContract.BaseDatosJuegosEntry.PREGUNTA + " TEXT NOT NULL,"
-                + JuegoContract.BaseDatosJuegosEntry.FORMULA + " TEXT NOT NULL,"
-                + JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA + " TEXT NOT NULL,"
-                + JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA + " TEXT NOT NULL)");
-
-        ContentValues values = new ContentValues();
-
-        values.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/1");
-        values.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado?");
-        values.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1+1=");
-        values.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "1");
-        values.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "2");
+        db.execSQL(JuegoContract.SQL_CREATE_ENTRIES);
 
     }
 
-    @Override
+
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }

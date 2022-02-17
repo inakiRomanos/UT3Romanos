@@ -22,15 +22,15 @@ public class JuegoContract {
         public static final String SEGUNDA_RESPUESTA = "segunda_respuesta";
     }
 
-    private static final String SQL_CREATE_ENTRIES =
+    public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + BaseDatosJuegosEntry.TABLE_NAME + " (" +
                     BaseDatosJuegosEntry.INDICE + " TEXT," +
                     BaseDatosJuegosEntry.PREGUNTA + " TEXT," +
                     BaseDatosJuegosEntry.FORMULA + " TEXT," +
                     BaseDatosJuegosEntry.PRIMERA_RESPUESTA + " TEXT," +
-                    BaseDatosJuegosEntry.SEGUNDA_RESPUESTA + " TEXT)";
+                    BaseDatosJuegosEntry.SEGUNDA_RESPUESTA + " TEXT )";
 
-    private static final String SQL_DELETE_ENTRIES =
+    public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + BaseDatosJuegosEntry.TABLE_NAME;
 
 }
