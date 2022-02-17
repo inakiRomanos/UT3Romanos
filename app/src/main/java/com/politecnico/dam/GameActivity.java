@@ -19,5 +19,8 @@ public class GameActivity extends AppCompatActivity {
 
         ImageView randomImage = findViewById(R.id.random_image);
         Picasso.get().load("https://picsum.photos/200/300").into(randomImage); //Añade una imagen (aleatoria) de tamaño 200 x 300
+
+        JuegoDBHelper con = new JuegoDBHelper(this);
+
     }
 }

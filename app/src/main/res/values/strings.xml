@@ -16,4 +16,10 @@
     <string name="nombre">nombre</string>
     <string name="CLINIC">CLINICS</string>
     <string name="randomImage" />
+    <string name="Indice">Indice</string>
+    <string name="Pregunta">Pregunta</string>
+    <string name="Formula">Formula</string>
+    <string name="textPrimeraOpcion">Primera Opcion</string>
+    <string name="textSegundaOpcion">SegundaOpcion</string>
+    <string name="textEnviar">Enviar</string>
 </resources>
