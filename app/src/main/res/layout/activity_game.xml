@@ -39,7 +39,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="TextView"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/TextoFormula"
@@ -47,6 +48,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="TextView"
+            android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
     </LinearLayout>
 
