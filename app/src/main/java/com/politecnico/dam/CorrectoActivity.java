@@ -27,7 +27,6 @@ public class CorrectoActivity extends AppCompatActivity {
         exit = (Button)findViewById(R.id.exit);
 
         exit.setOnClickListener(v -> {
-            GameActivity.contador = GameActivity.contador +1;
             Intent i = new Intent(CorrectoActivity.this, SplashscreenActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(i);

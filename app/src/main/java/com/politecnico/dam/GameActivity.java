@@ -146,28 +146,59 @@ public class GameActivity extends AppCompatActivity {
 
         sendButton.setOnClickListener(v -> {
 
-            if(primeraOpcion.isChecked()){
-                if(primeraRespuesta.equals(correctaRespuesta)){
-                    Intent i = new Intent(GameActivity.this, CorrectoActivity.class);
-                    i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    startActivity(i);
+            if(contador<4) {
+                if (primeraOpcion.isChecked()) {
+                    if (primeraRespuesta.equals(correctaRespuesta)) {
+                        Intent i = new Intent(GameActivity.this, CorrectoActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(GameActivity.this, IncorrectoActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    }
                 }
-                else{
-
-                }
-            }
-            if(segundaOpcion.isChecked()){
-                if(segundaRespuesta.equals(correctaRespuesta)){
-                    Intent i = new Intent(GameActivity.this, CorrectoActivity.class);
-                    i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    startActivity(i);
-                }
-                else{
-
+                if (segundaOpcion.isChecked()) {
+                    if (segundaRespuesta.equals(correctaRespuesta)) {
+                        Intent i = new Intent(GameActivity.this, CorrectoActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(GameActivity.this, IncorrectoActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    }
+                } else {
+                    Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
                 }
             }
             else{
-                Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
+
+                if (primeraOpcion.isChecked()) {
+                    if (primeraRespuesta.equals(correctaRespuesta)) {
+                        Intent i = new Intent(GameActivity.this, FinalActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(GameActivity.this, IncorrectoActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    }
+                }
+                if (segundaOpcion.isChecked()) {
+                    if (segundaRespuesta.equals(correctaRespuesta)) {
+                        Intent i = new Intent(GameActivity.this, FinalActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(GameActivity.this, IncorrectoActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    }
+                } else {
+                    Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
