@@ -42,7 +42,7 @@ public class GameActivity extends AppCompatActivity {
         values1.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1+1");
         values1.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "2");
         values1.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "5");
-        values1.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "2");
+
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId1 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values1);
@@ -54,7 +54,7 @@ public class GameActivity extends AppCompatActivity {
         values2.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1-1");
         values2.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
         values2.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "0");
-        values2.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "0");
+
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId2 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values2);
@@ -66,7 +66,7 @@ public class GameActivity extends AppCompatActivity {
         values3.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "5x5");
         values3.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "25");
         values3.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "52");
-        values3.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "25");
+
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId3 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values3);
@@ -78,7 +78,7 @@ public class GameActivity extends AppCompatActivity {
         values4.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "9/3");
         values4.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
         values4.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "33");
-        values4.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "3");
+
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId4 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values4);
@@ -93,7 +93,6 @@ public class GameActivity extends AppCompatActivity {
                 JuegoContract.BaseDatosJuegosEntry.FORMULA,
                 JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA,
                 JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA,
-                JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA,
         };
 
 // Filter results WHERE "title" = 'My Title'
