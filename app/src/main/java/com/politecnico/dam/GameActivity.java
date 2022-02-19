@@ -1,12 +1,11 @@
 package com.politecnico.dam;
 
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -21,6 +20,9 @@ public class GameActivity extends AppCompatActivity {
 
     TextView textoIndice, textoPregunta, textoFormula;
     RadioButton primeraOpcion, segundaOpcion;
+    Button sendButton;
+    public static int contador = 1;
+    String contadorString = String.valueOf(contador);
 
 
     @Override
@@ -37,11 +39,13 @@ public class GameActivity extends AppCompatActivity {
 
 // Create a new map of values, where column names are the keys
         ContentValues values1 = new ContentValues();
+        values1.put(JuegoContract.BaseDatosJuegosEntry.ID, "1");
         values1.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/4");
         values1.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la suma?");
         values1.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1+1");
         values1.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "2");
         values1.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "5");
+        values1.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "2");
 
 
 // Insert the new row, returning the primary key value of the new row
@@ -49,11 +53,13 @@ public class GameActivity extends AppCompatActivity {
 
         // Create a new map of values, where column names are the keys
         ContentValues values2 = new ContentValues();
+        values2.put(JuegoContract.BaseDatosJuegosEntry.ID, "2");
         values2.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "2/4");
         values2.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la resta?");
         values2.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1-1");
         values2.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
         values2.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "0");
+        values2.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "0");
 
 
 // Insert the new row, returning the primary key value of the new row
@@ -61,11 +67,13 @@ public class GameActivity extends AppCompatActivity {
 
         // Create a new map of values, where column names are the keys
         ContentValues values3 = new ContentValues();
+        values3.put(JuegoContract.BaseDatosJuegosEntry.ID, "3");
         values3.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "3/4");
         values3.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la multiplicación?");
         values3.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "5x5");
         values3.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "25");
         values3.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "52");
+        values3.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "25");
 
 
 // Insert the new row, returning the primary key value of the new row
@@ -73,11 +81,13 @@ public class GameActivity extends AppCompatActivity {
 
         // Create a new map of values, where column names are the keys
         ContentValues values4 = new ContentValues();
+        values4.put(JuegoContract.BaseDatosJuegosEntry.ID, "4");
         values4.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "4/4");
         values4.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la divisón?");
         values4.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "9/3");
-        values4.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
-        values4.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "33");
+        values4.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "33");
+        values4.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "3");
+        values4.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "3");
 
 
 // Insert the new row, returning the primary key value of the new row
@@ -93,11 +103,12 @@ public class GameActivity extends AppCompatActivity {
                 JuegoContract.BaseDatosJuegosEntry.FORMULA,
                 JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA,
                 JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA,
+                JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA,
         };
 
 // Filter results WHERE "title" = 'My Title'
-        String selection = JuegoContract.BaseDatosJuegosEntry.INDICE + " = ?";
-        String[] selectionArgs = { "1/4" };
+        String selection = JuegoContract.BaseDatosJuegosEntry.ID + " = ?";
+        String[] selectionArgs = { contadorString };
 
 // How you want the results sorted in the resulting Cursor
 
@@ -125,7 +136,35 @@ public class GameActivity extends AppCompatActivity {
         textoFormula.setText(cursor.getString(2));
 
         primeraOpcion.setText(cursor.getString(3));
+        String primeraRespuesta = cursor.getString(3);
         segundaOpcion.setText(cursor.getString(4));
+        String segundaRespuesta = cursor.getString(4);
+        String correctaRespuesta = cursor.getString(5);
+
+        sendButton = (Button)findViewById(R.id.Send);
+
+        sendButton.setOnClickListener(v -> {
+
+            if(primeraOpcion.isChecked()){
+                if(primeraRespuesta.equals(correctaRespuesta)){
+                    setContentView(R.layout.correcto);
+                }
+                else{
+
+                }
+            }
+            if(segundaOpcion.isChecked()){
+                if(segundaRespuesta.equals(correctaRespuesta)){
+                    setContentView(R.layout.correcto);
+                }
+                else{
+
+                }
+            }
+            else{
+                Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 

@@ -22,4 +22,5 @@
     <string name="textPrimeraOpcion">Primera Opcion</string>
     <string name="textSegundaOpcion">SegundaOpcion</string>
     <string name="textEnviar">Enviar</string>
+    <string name="SEND">Send</string>
 </resources>

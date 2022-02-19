@@ -74,11 +74,11 @@
             android:text="RadioButton" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/Send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Button" />
+            android:text="@string/SEND" />
     </LinearLayout>
 
 
