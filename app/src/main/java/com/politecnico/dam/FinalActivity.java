@@ -28,7 +28,7 @@ public class FinalActivity extends AppCompatActivity {
 
         exit.setOnClickListener(v -> {
 
-            Intent i = new Intent(FinalActivity.this, SplashscreenActivity.class);
+            Intent i = new Intent(FinalActivity.this, DashboardActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(i);
         });

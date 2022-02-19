@@ -27,7 +27,7 @@ public class CorrectoActivity extends AppCompatActivity {
         exit = (Button)findViewById(R.id.exit);
 
         exit.setOnClickListener(v -> {
-            Intent i = new Intent(CorrectoActivity.this, SplashscreenActivity.class);
+            Intent i = new Intent(CorrectoActivity.this, DashboardActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(i);
         });

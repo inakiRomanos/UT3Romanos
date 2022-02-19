@@ -27,7 +27,7 @@ public class IncorrectoActivity extends AppCompatActivity {
 
         exit.setOnClickListener(v -> {
             GameActivity.contador = GameActivity.contador +1;
-            Intent i = new Intent(IncorrectoActivity.this, SplashscreenActivity.class);
+            Intent i = new Intent(IncorrectoActivity.this, DashboardActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(i);
         });

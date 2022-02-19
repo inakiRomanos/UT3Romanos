@@ -168,7 +168,7 @@ public class GameActivity extends AppCompatActivity {
                         i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         startActivity(i);
                     }
-                } else {
+                } if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())){
                     Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
                 }
             }
@@ -195,7 +195,7 @@ public class GameActivity extends AppCompatActivity {
                         i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         startActivity(i);
                     }
-                } else {
+                } if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())) {
                     Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
                 }
 
