@@ -36,6 +36,7 @@
         <activity android:name=".DashboardActivity" />
         <activity android:name=".ContactActivity" />
         <activity android:name=".GameActivity" />
+        <activity android:name=".CorrectoActivity" />
         <activity
             android:name=".SplashscreenActivity"
             android:exported="true" >

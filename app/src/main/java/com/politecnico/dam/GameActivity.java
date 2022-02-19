@@ -2,6 +2,7 @@ package com.politecnico.dam;
 
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -147,7 +148,9 @@ public class GameActivity extends AppCompatActivity {
 
             if(primeraOpcion.isChecked()){
                 if(primeraRespuesta.equals(correctaRespuesta)){
-                    setContentView(R.layout.correcto);
+                    Intent i = new Intent(GameActivity.this, CorrectoActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(i);
                 }
                 else{
 
@@ -155,7 +158,9 @@ public class GameActivity extends AppCompatActivity {
             }
             if(segundaOpcion.isChecked()){
                 if(segundaRespuesta.equals(correctaRespuesta)){
-                    setContentView(R.layout.correcto);
+                    Intent i = new Intent(GameActivity.this, CorrectoActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(i);
                 }
                 else{
 

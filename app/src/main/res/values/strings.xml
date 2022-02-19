@@ -23,4 +23,6 @@
     <string name="textSegundaOpcion">SegundaOpcion</string>
     <string name="textEnviar">Enviar</string>
     <string name="SEND">Send</string>
+    <string name="Correct">Correct</string>
+    <string name="Wrong">Wrong</string>
 </resources>
