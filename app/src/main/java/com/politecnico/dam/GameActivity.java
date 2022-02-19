@@ -1,10 +1,15 @@
 package com.politecnico.dam;
 
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +18,9 @@ import com.squareup.picasso.Picasso;
 
 
 public class GameActivity extends AppCompatActivity {
+
+    TextView textoIndice, textoPregunta, textoFormula;
+    RadioButton primeraOpcion, segundaOpcion;
 
 
     @Override
@@ -29,47 +37,97 @@ public class GameActivity extends AppCompatActivity {
 
 // Create a new map of values, where column names are the keys
         ContentValues values1 = new ContentValues();
-        values1.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/1");
+        values1.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/4");
         values1.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la suma?");
         values1.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1+1");
         values1.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "2");
         values1.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "5");
+        values1.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "2");
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId1 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values1);
 
         // Create a new map of values, where column names are the keys
         ContentValues values2 = new ContentValues();
-        values2.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/2");
+        values2.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "2/4");
         values2.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la resta?");
         values2.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1-1");
         values2.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
         values2.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "0");
+        values2.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "0");
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId2 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values2);
 
         // Create a new map of values, where column names are the keys
         ContentValues values3 = new ContentValues();
-        values3.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/1");
+        values3.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "3/4");
         values3.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la multiplicación?");
         values3.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "5x5");
         values3.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "25");
         values3.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "52");
+        values3.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "25");
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId3 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values3);
 
         // Create a new map of values, where column names are the keys
         ContentValues values4 = new ContentValues();
-        values4.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/1");
+        values4.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "4/4");
         values4.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la divisón?");
         values4.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "9/3");
         values4.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
         values4.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "33");
+        values4.put(JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA, "3");
 
 // Insert the new row, returning the primary key value of the new row
         long newRowId4 = db.insert(JuegoContract.BaseDatosJuegosEntry.TABLE_NAME, null, values4);
 
+        SQLiteDatabase db2 = con.getReadableDatabase();
+
+// Define a projection that specifies which columns from the database
+// you will actually use after this query.
+        String[] projection = {
+                JuegoContract.BaseDatosJuegosEntry.INDICE,
+                JuegoContract.BaseDatosJuegosEntry.PREGUNTA,
+                JuegoContract.BaseDatosJuegosEntry.FORMULA,
+                JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA,
+                JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA,
+                JuegoContract.BaseDatosJuegosEntry.RESPUESTA_CORRECTA,
+        };
+
+// Filter results WHERE "title" = 'My Title'
+        String selection = JuegoContract.BaseDatosJuegosEntry.INDICE + " = ?";
+        String[] selectionArgs = { "1/4" };
+
+// How you want the results sorted in the resulting Cursor
+
+        Cursor cursor = db2.query(
+                JuegoContract.BaseDatosJuegosEntry.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null              // The sort order
+        );
+
+        textoIndice=(TextView) findViewById(R.id.TextoIndice);
+        textoPregunta=(TextView) findViewById(R.id.TextoPregunta);
+        textoFormula=(TextView) findViewById(R.id.TextoFormula);
+
+        primeraOpcion=(RadioButton)findViewById(R.id.PrimeraOpcion);
+        segundaOpcion=(RadioButton)findViewById(R.id.SegundaOpcion);
+
+        cursor.moveToFirst();
+
+        textoIndice.setText(cursor.getString(0));
+        textoPregunta.setText(cursor.getString(1));
+        textoFormula.setText(cursor.getString(2));
+
+        primeraOpcion.setText(cursor.getString(3));
+        segundaOpcion.setText(cursor.getString(4));
+
     }
+
 }
