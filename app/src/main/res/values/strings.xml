@@ -6,23 +6,34 @@
     <string name="CONTACTS">CONTACTS</string>
     <string name="HEALTH">HEALTH</string>
     <string name="MAPS">MAPS</string>
-    <string name="trending">TRENDING</string>
-    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
-    <string name="home">home</string>
-    <string name="favorite">favorite</string>
-    <string name="account">account</string>
-    <string name="settings">settings</string>
-    <string name="title_activity_maps">MapsActivity</string>
-    <string name="nombre">nombre</string>
+    <string name="trending" translatable="false">TRENDING</string>
+    <string name="dummy" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+    <string name="home" translatable="false">home</string>
+    <string name="favorite" translatable="false">favorite</string>
+    <string name="account" translatable="false">account</string>
+    <string name="settings" translatable="false">settings</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="nombre" translatable="false">nombre</string>
     <string name="CLINIC">CLINICS</string>
-    <string name="randomImage" />
-    <string name="Indice">Indice</string>
-    <string name="Pregunta">Pregunta</string>
-    <string name="Formula">Formula</string>
-    <string name="textPrimeraOpcion">Primera Opcion</string>
-    <string name="textSegundaOpcion">SegundaOpcion</string>
-    <string name="textEnviar">Enviar</string>
+    <string name="randomImage" translatable="false" />
+    <string name="Indice" translatable="false">Indice</string>
+    <string name="Pregunta" translatable="false">Pregunta</string>
+    <string name="Formula" translatable="false">Formula</string>
+    <string name="textPrimeraOpcion" translatable="false">Primera Opcion</string>
+    <string name="textSegundaOpcion" translatable="false">SegundaOpcion</string>
+    <string name="textEnviar">Send</string>
     <string name="SEND">Send</string>
     <string name="Correct">Correct</string>
     <string name="Wrong">Wrong</string>
+    <string name="resta">What is the result of the subtraction?</string>
+    <string name="suma">What is the result of the sum?</string>
+    <string name="multiplicacion">" What is the result of the multiplication?"</string>
+    <string name="division">" What is the result of the division?"</string>
+    <string name="seleccione_respuesta">Selecciona Respuesta</string>
+    <string name="next">NEXT</string>
+    <string name="exit">EXIT</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="restart">RESTART</string>
+    <string name="exit">EXIT</string>
+    <string name="congrats">Congrats</string>
 </resources>

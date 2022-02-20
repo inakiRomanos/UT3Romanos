@@ -42,7 +42,7 @@ public class GameActivity extends AppCompatActivity {
         ContentValues values1 = new ContentValues();
         values1.put(JuegoContract.BaseDatosJuegosEntry.ID, "1");
         values1.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "1/4");
-        values1.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la suma?");
+        values1.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, getString(R.string.suma));
         values1.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1+1");
         values1.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "2");
         values1.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "5");
@@ -56,7 +56,7 @@ public class GameActivity extends AppCompatActivity {
         ContentValues values2 = new ContentValues();
         values2.put(JuegoContract.BaseDatosJuegosEntry.ID, "2");
         values2.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "2/4");
-        values2.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la resta?");
+        values2.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, getString(R.string.resta));
         values2.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "1-1");
         values2.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "3");
         values2.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "0");
@@ -70,7 +70,7 @@ public class GameActivity extends AppCompatActivity {
         ContentValues values3 = new ContentValues();
         values3.put(JuegoContract.BaseDatosJuegosEntry.ID, "3");
         values3.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "3/4");
-        values3.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la multiplicación?");
+        values3.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, getString(R.string.multiplicacion));
         values3.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "5x5");
         values3.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "25");
         values3.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "52");
@@ -84,7 +84,7 @@ public class GameActivity extends AppCompatActivity {
         ContentValues values4 = new ContentValues();
         values4.put(JuegoContract.BaseDatosJuegosEntry.ID, "4");
         values4.put(JuegoContract.BaseDatosJuegosEntry.INDICE, "4/4");
-        values4.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, "¿Cual es el resultado de la divisón?");
+        values4.put(JuegoContract.BaseDatosJuegosEntry.PREGUNTA, getString(R.string.division));
         values4.put(JuegoContract.BaseDatosJuegosEntry.FORMULA, "9/3");
         values4.put(JuegoContract.BaseDatosJuegosEntry.PRIMERA_RESPUESTA, "33");
         values4.put(JuegoContract.BaseDatosJuegosEntry.SEGUNDA_RESPUESTA, "3");
@@ -169,7 +169,7 @@ public class GameActivity extends AppCompatActivity {
                         startActivity(i);
                     }
                 } if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())){
-                    Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.seleccione_respuesta, Toast.LENGTH_LONG).show();
                 }
             }
             else{
@@ -196,7 +196,7 @@ public class GameActivity extends AppCompatActivity {
                         startActivity(i);
                     }
                 } if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())) {
-                    Toast.makeText(this, "Selecciona Respuesta", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,  R.string.seleccione_respuesta, Toast.LENGTH_LONG).show();
                 }
 
             }

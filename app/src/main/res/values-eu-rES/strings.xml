@@ -8,4 +8,17 @@
     <string name="CONTACTS">" KONTAKTUAK"</string>
     <string name="GAMES">JOLASAK</string>
     <string name="CLINIC">KLINIKAK</string>
+    <string name="textEnviar">Enviar</string>
+    <string name="SEND">Enviar</string>
+    <string name="Correct">Correcto</string>
+    <string name="Wrong">Incorrecto</string>
+    <string name="next">PROXIMO</string>
+    <string name="exit">SALIR</string>
+    <string name="try_again">INTENTALO DE NUEVO</string>
+    <string name="restart">VOLVER A EMPEZR</string>
+    <string name="congrats">ENHORABUENA</string>
+    <string name="division">¿Cual es el resultado de la divisón?</string>
+    <string name="multiplicacion">¿Cual es el resultado de la multiplicación?</string>
+    <string name="suma">¿Cual es el resultado de la suma?</string>
+    <string name="resta">¿Cuál es el resultado de la resta?</string>
 </resources>
