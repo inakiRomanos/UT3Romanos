@@ -1,6 +1,7 @@
 package com.politecnico.dam;
 
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -113,7 +114,7 @@ public class GameActivity extends AppCompatActivity {
 
 // How you want the results sorted in the resulting Cursor
 
-        Cursor cursor = db2.query(
+        @SuppressLint("Recycle") Cursor cursor = db2.query(
                 JuegoContract.BaseDatosJuegosEntry.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 selection,              // The columns for the WHERE clause
@@ -123,12 +124,12 @@ public class GameActivity extends AppCompatActivity {
                 null              // The sort order
         );
 
-        textoIndice=(TextView) findViewById(R.id.TextoIndice);
-        textoPregunta=(TextView) findViewById(R.id.TextoPregunta);
-        textoFormula=(TextView) findViewById(R.id.TextoFormula);
+        textoIndice= findViewById(R.id.TextoIndice);
+        textoPregunta= findViewById(R.id.TextoPregunta);
+        textoFormula= findViewById(R.id.TextoFormula);
 
-        primeraOpcion=(RadioButton)findViewById(R.id.PrimeraOpcion);
-        segundaOpcion=(RadioButton)findViewById(R.id.SegundaOpcion);
+        primeraOpcion= findViewById(R.id.PrimeraOpcion);
+        segundaOpcion= findViewById(R.id.SegundaOpcion);
 
         cursor.moveToFirst();
 
@@ -142,7 +143,7 @@ public class GameActivity extends AppCompatActivity {
         String segundaRespuesta = cursor.getString(4);
         String correctaRespuesta = cursor.getString(5);
 
-        sendButton = (Button)findViewById(R.id.Send);
+        sendButton = findViewById(R.id.Send);
 
         sendButton.setOnClickListener(v -> {
 

@@ -15,7 +15,7 @@ public class CorrectoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_correcto);
 
-        next = (Button)findViewById(R.id.next);
+        next = findViewById(R.id.next);
 
         next.setOnClickListener(v -> {
             GameActivity.contador = GameActivity.contador +1;
@@ -24,7 +24,7 @@ public class CorrectoActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        exit = (Button)findViewById(R.id.exit);
+        exit = findViewById(R.id.exit);
 
         exit.setOnClickListener(v -> {
             Intent i = new Intent(CorrectoActivity.this, DashboardActivity.class);

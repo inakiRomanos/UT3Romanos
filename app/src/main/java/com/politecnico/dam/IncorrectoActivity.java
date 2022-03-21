@@ -15,7 +15,7 @@ public class IncorrectoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_incorrecto);
 
-        tryAgain = (Button)findViewById(R.id.tryagain);
+        tryAgain = findViewById(R.id.tryagain);
 
         tryAgain.setOnClickListener(v -> {
             Intent i = new Intent(IncorrectoActivity.this, GameActivity.class);
@@ -23,7 +23,7 @@ public class IncorrectoActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        exit = (Button)findViewById(R.id.exit);
+        exit = findViewById(R.id.exit);
 
         exit.setOnClickListener(v -> {
             GameActivity.contador = GameActivity.contador +1;

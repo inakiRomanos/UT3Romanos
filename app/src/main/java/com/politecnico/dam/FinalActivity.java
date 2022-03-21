@@ -15,7 +15,7 @@ public class FinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
 
-        restart = (Button)findViewById(R.id.restart);
+        restart = findViewById(R.id.restart);
 
         restart.setOnClickListener(v -> {
             GameActivity.contador = 1;
@@ -24,7 +24,7 @@ public class FinalActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        exit = (Button)findViewById(R.id.exit);
+        exit = findViewById(R.id.exit);
 
         exit.setOnClickListener(v -> {
 

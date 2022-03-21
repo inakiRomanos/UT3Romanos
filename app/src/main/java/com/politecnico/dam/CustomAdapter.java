@@ -1,5 +1,6 @@
 package com.politecnico.dam;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +38,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder,final int position) {
+    public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         // set the data in items
         holder.nombre.setText(nombreCentro.get(position));
         holder.direccion.setText(direccionCentro.get(position));
@@ -67,10 +68,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             super(itemView);
 
             // get the reference of item view's
-            nombre = (TextView) itemView.findViewById(R.id.nombre);
-            direccion = (TextView) itemView.findViewById(R.id.direccion);
-            localidad = (TextView) itemView.findViewById(R.id.localidad);
-            telefono = (TextView) itemView.findViewById(R.id.telefono);
+            nombre = itemView.findViewById(R.id.nombre);
+            direccion = itemView.findViewById(R.id.direccion);
+            localidad = itemView.findViewById(R.id.localidad);
+            telefono = itemView.findViewById(R.id.telefono);
 
         }
     }

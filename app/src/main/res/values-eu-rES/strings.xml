@@ -5,10 +5,8 @@
     <string name="hello">Kaixo</string>
     <string name="MAPS">MAPAK</string>
     <string name="HEALTH">OSASUNA</string>
-    <string name="CONTACTS">" KONTAKTUAK"</string>
     <string name="GAMES">JOLASAK</string>
     <string name="CLINIC">KLINIKAK</string>
-    <string name="textEnviar">Bidaldi</string>
     <string name="SEND">Bidaldi</string>
     <string name="Correct">Ongi</string>
     <string name="Wrong">Gaizki</string>
@@ -21,4 +19,5 @@
     <string name="suma">Zein da batuketaren emaitza?</string>
     <string name="resta">Zein da kenketaren emaitza?</string>
     <string name="try_again">SAIATU BERRIRO</string>
+    <string name="seleccione_respuesta">Hautatu erantzuna</string>
 </resources>

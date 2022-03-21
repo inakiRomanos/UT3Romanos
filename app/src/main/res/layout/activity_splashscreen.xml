@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
 
     <ImageView
-        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="30dp"
@@ -15,5 +16,5 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/ic_launcher_round"
-        />
+        android:contentDescription="TODO" />
 </RelativeLayout>

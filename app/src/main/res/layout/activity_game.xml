@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView"
+            android:text="@string/textview"
             android:textSize="24sp" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView"
+            android:text="@string/textview"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -47,13 +47,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView"
+            android:text="@string/textview"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/opciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/preguntas"
@@ -70,14 +69,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="RadioButton" />
+                android:text="@string/radiobutton" />
 
             <RadioButton
                 android:id="@+id/SegundaOpcion"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="RadioButton" />
+                android:text="@string/radiobutton" />
         </RadioGroup>
 
         <Button

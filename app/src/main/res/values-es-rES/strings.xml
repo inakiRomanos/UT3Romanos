@@ -3,17 +3,9 @@
     <string name="Jhon">Juan</string>
     <string name="hello">Hola</string>
     <string name="GAMES">JUEGOS</string>
-    <string name="CONTACTS">CONTACTOS</string>
     <string name="HEALTH">SALUD</string>
     <string name="MAPS">MAPAS</string>
-    <string name="trending">TRENDING</string>
-    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
-    <string name="home">home</string>
-    <string name="favorite">favorite</string>
-    <string name="account">account</string>
-    <string name="settings">settings</string>
     <string name="CLINIC">CLINICAS</string>
-    <string name="textEnviar">Enviar</string>
     <string name="SEND">Enviar</string>
     <string name="Correct">Correcto</string>
     <string name="Wrong">Incorrecto</string>
@@ -26,4 +18,5 @@
     <string name="restart">VOLVER A EMPEZAR</string>
     <string name="exit">SALIR</string>
     <string name="congrats">ENHORABUENA</string>
+    <string name="seleccione_respuesta">Seleccione respuesta</string>
 </resources>

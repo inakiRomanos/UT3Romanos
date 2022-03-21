@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_margin="5dp"
     android:layout_height="wrap_content">
@@ -20,7 +17,7 @@
             android:id="@+id/nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="nombre"
+            android:text="@string/nombre"
             android:textColor="#000"
             android:textSize="20sp" />
 
@@ -28,7 +25,7 @@
             android:id="@+id/direccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="direccion"
+            android:text="@string/direccion"
             android:textColor="#000"
             android:textSize="15sp" />
 
@@ -36,7 +33,7 @@
             android:id="@+id/localidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="localidad"
+            android:text="@string/localidad"
             android:textColor="#000"
             android:textSize="15sp" />
 
@@ -44,7 +41,7 @@
             android:id="@+id/telefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="telefono"
+            android:text="@string/telefono"
             android:textColor="#000"
             android:textSize="15sp" />
     </LinearLayout>

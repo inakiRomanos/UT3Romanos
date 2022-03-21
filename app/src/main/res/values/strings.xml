@@ -1,9 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">UT3Romanos</string>
     <string name="Jhon">Jhon</string>
     <string name="hello">Hello</string>
     <string name="GAMES">GAMES</string>
-    <string name="CONTACTS">CONTACTS</string>
     <string name="HEALTH">HEALTH</string>
     <string name="MAPS">MAPS</string>
     <string name="trending" translatable="false">TRENDING</string>
@@ -16,12 +15,6 @@
     <string name="nombre" translatable="false">nombre</string>
     <string name="CLINIC">CLINICS</string>
     <string name="randomImage" translatable="false" />
-    <string name="Indice" translatable="false">Indice</string>
-    <string name="Pregunta" translatable="false">Pregunta</string>
-    <string name="Formula" translatable="false">Formula</string>
-    <string name="textPrimeraOpcion" translatable="false">Primera Opcion</string>
-    <string name="textSegundaOpcion" translatable="false">SegundaOpcion</string>
-    <string name="textEnviar">Send</string>
     <string name="SEND">Send</string>
     <string name="Correct">Correct</string>
     <string name="Wrong">Wrong</string>
@@ -29,10 +22,16 @@
     <string name="suma">What is the result of the sum?</string>
     <string name="multiplicacion">" What is the result of the multiplication?"</string>
     <string name="division">" What is the result of the division?"</string>
-    <string name="seleccione_respuesta">Selecciona Respuesta</string>
     <string name="next">NEXT</string>
     <string name="try_again">TRY AGAIN</string>
     <string name="restart">RESTART</string>
     <string name="exit">EXIT</string>
     <string name="congrats">Congrats</string>
+    <string name="seleccione_respuesta">Select answer</string>
+    <string name="search_elements" translatable="false">Search elements</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="radiobutton" translatable="false" tools:ignore="DuplicateDefinition">RadioButton</string>
+    <string name="direccion" translatable="false">direccion</string>
+    <string name="localidad" translatable="false">localidad</string>
+    <string name="telefono" translatable="false">telefono</string>
 </resources>
