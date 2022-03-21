@@ -6,8 +6,10 @@ import android.provider.BaseColumns;
  * Esquema base de datos
  */
 
+@SuppressWarnings("ALL")
 public class JuegoContract {
 
+    @SuppressWarnings("unused")
     public JuegoContract() {
     }
 
@@ -34,6 +36,7 @@ public class JuegoContract {
                     BaseDatosJuegosEntry.RESPUESTA_CORRECTA + " TEXT," +
                     BaseDatosJuegosEntry.SEGUNDA_RESPUESTA + " TEXT )";
 
+    @SuppressWarnings("unused")
     public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + BaseDatosJuegosEntry.TABLE_NAME;
 

@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.squareup.picasso.Picasso;
 
 
+@SuppressWarnings("CanBeFinal")
 public class GameActivity extends AppCompatActivity {
 
     TextView textoIndice, textoPregunta, textoFormula;
@@ -27,6 +28,7 @@ public class GameActivity extends AppCompatActivity {
     String contadorString = String.valueOf(contador);
 
 
+    @SuppressWarnings("unused")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -169,8 +171,6 @@ public class GameActivity extends AppCompatActivity {
                         i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         startActivity(i);
                     }
-                } if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())){
-                    Toast.makeText(this, R.string.seleccione_respuesta, Toast.LENGTH_LONG).show();
                 }
             }
             else{
@@ -196,10 +196,11 @@ public class GameActivity extends AppCompatActivity {
                         i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         startActivity(i);
                     }
-                } if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())) {
-                    Toast.makeText(this,  R.string.seleccione_respuesta, Toast.LENGTH_LONG).show();
                 }
 
+            }
+            if(!(primeraOpcion.isChecked()) && !(segundaOpcion.isChecked())){
+                Toast.makeText(this, R.string.seleccione_respuesta, Toast.LENGTH_LONG).show();
             }
         });
 

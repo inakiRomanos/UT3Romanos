@@ -41,6 +41,27 @@
       </map>
     </option>
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.politecnico.dam.MapsActivity mLastLocation" />
+      <entry_point TYPE="field" FQNAME="com.politecnico.dam.JuegoContract SQL_DELETE_ENTRIES" />
+    </entry_points>
+    <pattern value="com.politecnico.dam.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="com.politecnico.dam.ContactActivity" />
+    <pattern value="com.politecnico.dam.CorrectoActivity" />
+    <pattern value="com.politecnico.dam.DashboardActivity" />
+    <pattern value="com.politecnico.dam.ExampleInstrumentedTest" />
+    <pattern value="com.politecnico.dam.ExampleUnitTest" />
+    <pattern value="com.politecnico.dam.FinalActivity" />
+    <pattern value="com.politecnico.dam.GameActivity" />
+    <pattern value="com.politecnico.dam.IncorrectoActivity" />
+    <pattern value="com.politecnico.dam.MapsActivity" />
+    <pattern value="com.politecnico.dam.SplashscreenActivity" />
+    <pattern value="com.politecnico.dam.JuegoContract" />
+    <pattern value="com.politecnico.dam.JuegoContract" method="JuegoContract" />
+    <pattern value="com.politecnico.dam.GameActivity" method="onCreate" />
+    <pattern value="com.politecnico.dam.ExampleInstrumentedTest" method="useAppContext" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

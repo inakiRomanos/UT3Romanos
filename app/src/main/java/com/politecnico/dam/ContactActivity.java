@@ -1,6 +1,5 @@
 package com.politecnico.dam;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 
+@SuppressWarnings("CanBeFinal")
 public class ContactActivity extends AppCompatActivity {
 
     ArrayList<String> nombre = new ArrayList<>();
@@ -58,6 +58,7 @@ public class ContactActivity extends AppCompatActivity {
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public String loadJSONFromAsset() {
         String json;
         try {

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+@SuppressWarnings("FieldCanBeLocal")
 @SuppressLint("CustomSplashScreen")
 public class SplashscreenActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class SplashscreenActivity extends AppCompatActivity {
 
         /* New Handler to star DashboardActivity
         *and close this Splshscreen after some seconds. */
+        //noinspection Convert2Lambda
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
